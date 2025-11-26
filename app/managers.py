@@ -30,9 +30,9 @@ class ActorManager:
         cursor = self._connection.cursor()
         cursor.execute(
             f"""
-            UPDATE {self.table_name} 
-            SET first_name = ?, last_name = ? 
-            WHERE id = ? 
+            UPDATE {self.table_name}
+            SET first_name = ?, last_name = ?
+            WHERE id = ?
             """,
             (new_first_name, new_last_name, pk)
         )
